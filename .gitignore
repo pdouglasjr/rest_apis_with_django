@@ -160,4 +160,4 @@ cython_debug/
 #.idea/
 
 # VS Code Workspaces
-.code-workspace
+*.code-workspace
