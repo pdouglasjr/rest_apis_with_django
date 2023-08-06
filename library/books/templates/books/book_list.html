@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>All Books</h1>
+
+    {% for book in object_list %}
+    <ul>
+        <li>Title: <strong>{{ book.title }}</strong></li>
+
+        {% if book.subtitle %}
+        <li>Subtitle: {{ book.subtitle }}</li>
+        {% endif %}
+        <li>Author: {{ book.author }}</li>
+
+        {% if book.isbn %}
+        <li>ISBN: {{ book.isbn }}</li>
+        {% elif book.asin %}
+        <li>ASIN: {{ book.asin }}</li>
+        {% endif %}
+    </ul>
+    {% endfor %}
+
+</body>
+
+</html>
